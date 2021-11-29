@@ -1,1 +1,3 @@
-# bcoin
+# bcoin - ERC20 implementation
+
+
