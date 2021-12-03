@@ -21,5 +21,8 @@
   "homepage": "https://github.com/beaver-codes/bcoin#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.0.0"
   }
 }
