@@ -60,27 +60,35 @@ module.exports = {
     // NB: It's important to wrap the provider as a function.
     rinkeby: {
       provider: () => new HDWalletProvider({ privateKeys: PRIVATE_KEYS, providerOrUrl: INFURA_ENDPOINT }),
-      network_id: 4,       // Ropsten's id
-      gas: 5500000,        // Ropsten has a lower block limit than mainnet
-      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      network_id: 4,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    avalanche_test: {
+      provider: () => new HDWalletProvider({ privateKeys: PRIVATE_KEYS, providerOrUrl: 'https://api.avax-test.network/ext/bc/C/rpc' }),
+      network_id: 1,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
     bsc_test: {
       provider: () => new HDWalletProvider({ privateKeys: PRIVATE_KEYS, providerOrUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545' }),
-      network_id: 97,       // Ropsten's id
-      gas: 5500000,        // Ropsten has a lower block limit than mainnet
-      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      network_id: 97,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
     bsc: {
       provider: () => new HDWalletProvider({ privateKeys: PRIVATE_KEYS, providerOrUrl: 'https://bsc-dataseed1.binance.org' }),
-      network_id: 56,       // Ropsten's id
-      gas: 5500000,        // Ropsten has a lower block limit than mainnet
-      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      network_id: 56,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
     // Useful for private networks
     // private: {
