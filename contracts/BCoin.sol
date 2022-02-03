@@ -1,6 +1,5 @@
 pragma solidity ^0.8.10;
 
-
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract BCoin is ERC20 {
@@ -10,9 +9,9 @@ contract BCoin is ERC20 {
         _owner = msg.sender;
     }
 
-    function mint(uint256 amount) external {
-        require(_owner == msg.sender, "Only for me to call");
+    function mint() external payable {
+        uint256 newTokensAmount = msg.value; // Ratio
 
-        _mint(msg.sender, amount);
+        _mint(msg.sender, newTokensAmount);
     }
 }
